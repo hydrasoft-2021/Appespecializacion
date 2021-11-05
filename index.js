@@ -1,15 +1,15 @@
-var http = require("http"); //importando una libreria
+const express = require("express");
+const { request } = require("http");
 
-var server = http.createServer();//Crear un servidor
+const app = express();
 
-function mensaje(req, resp){
-    resp.writeHead(200, {'content-type': 'text/plain'});
-    resp.write('Hola Mundo en clase de dev app web');
-    resp.end();
-}
-
-server.on('request', mensaje);
-
-server.listen(3030, function(){
-    console.log('La aplicación esta escuchando por el puerto 3030');
+//Definiendo una ruta
+app.get("/ping",(request, response) =>{
+    response.send("pong");
 });
+
+app.get("/", (request,response)=>{
+    response.send("Página principal");
+});
+
+app.listen(8080, "localhost");
