@@ -1,5 +1,5 @@
 const express = require("express");
-const { request } = require("http");
+const mensaje = require("./Mensaje");
 
 const app = express();
 
@@ -21,4 +21,6 @@ app.post("/registro", function(req,res){
 
 });
 
-app.listen(8080, "localhost");
+express().use("/",mensaje({saludo: "Hola Mundo web"})).listen(8080);
+
+//app.listen(8080, "localhost");    
