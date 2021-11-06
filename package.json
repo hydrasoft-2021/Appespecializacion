@@ -10,7 +10,9 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
+    "express-generator": "^4.16.1",
     "http": "0.0.1-security",
-    "ngrok": "^4.2.2"
+    "ngrok": "^4.2.2",
+    "pug": "^3.0.2"
   }
 }
