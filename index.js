@@ -30,7 +30,11 @@ app.set("view engine", "pug");
 app.set("views", "./views");
 
 app.get("/", function(req, res){
-    res.render('index', { title: 'Hey', message: 'Hello there!'});
+    res.render('index', { title: 'Hey', message: 'Hello World!'});
+});
+
+app.get("/contacto", function(req, res){
+    res.render('contacto', { title: 'contacto', message: 'Formulario Contacto'});
 });
 
 app.listen(PORT, function(err){
